@@ -25,9 +25,9 @@ class USA():
 	def type(self):
 		print("USA is a developed country.")
 
-obj_ind = Country()
+obj_pak = Country()
 obj_usa = USA()
-for country in (obj_ind, obj_usa):
+for country in (obj_pak, obj_usa):
 	country.capital()
 	country.language()
 	country.type()
