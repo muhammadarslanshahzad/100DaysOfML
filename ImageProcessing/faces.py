@@ -13,7 +13,7 @@ while True:
             x, y, w, h = face
             frame =cv2.rectangle(frame, (x,y), (x+w, y+h), (0, 0, 255), 4)
 
-        cv2.imshow("MY Windows", frame)
+        cv2.imshow("Live Webcame", frame)
     key = cv2.waitKey(1)
 
     if key == ord("q"):
