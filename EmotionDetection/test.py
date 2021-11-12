@@ -1,6 +1,7 @@
-from keras.models import load_model
-from keras.preprocessing.image import img_to_array
-from keras.preprocessing import image
+from tensorflow import keras
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing import image
 from time import sleep
 import cv2
 import numpy as np
@@ -18,8 +19,8 @@ while True:
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = face_classifier.detectMultiScale(gray, 1.3, 5)
 
-    for (x,y,w,h) in faces:
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         roi_gray = gray[y:y+h, x:x+w]
         roi_gray = cv2.resize(roi_gray, (48, 48), interpolation=cv2.INTER_AREA)
 
